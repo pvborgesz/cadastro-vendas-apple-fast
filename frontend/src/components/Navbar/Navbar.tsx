@@ -2,28 +2,31 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import AppleFastLogo from "../assets/apple-fast-logo.jpeg";
+import AppleFastLogo from "../../assets/apple-fast-logo.png";
 
 export default function Header(): JSX.Element {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar
+      sticky="top"
+      collapseOnSelect
+      expand="lg"
+      bg="light"
+      variant="light"
+    >
       <Container>
         <Navbar.Brand href="#home">
-          Apple Fast
           <img
             src={AppleFastLogo}
-            style={{ width: "30px", height: "30px", margin: "0 5px 0 20px" }}
+            style={{ width: "100px", height: "50px", margin: "0 30px 0 0" }}
           />
+          Apple Fast
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Instagram</Nav.Link>
-            <Nav.Link href="#pricing">Whatsapp</Nav.Link>
-            <NavDropdown
-              title="Outras Redes Sociais"
-              id="collasible-nav-dropdown"
-            >
+            <Nav.Link href="#features">Estoque</Nav.Link>
+            <Nav.Link href="#pricing">Vendas</Nav.Link>
+            <NavDropdown title="Redes Sociais" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -35,12 +38,7 @@ export default function Header(): JSX.Element {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav>
-            {/* <Nav.Link href="#deets">More deets</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
-                        </Nav.Link> */}
-          </Nav>
+          <Nav></Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
