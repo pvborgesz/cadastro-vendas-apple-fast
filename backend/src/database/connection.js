@@ -11,6 +11,7 @@ const connection = mysql.createConnection({
   user: "root",
   password: "",
   database: "applefast",
+  socketPath: "/tmp/mysql.sock",
 });
 
 connection.connect(function (err) {

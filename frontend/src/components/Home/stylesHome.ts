@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   position: absolute;
   background: #282534;
   width: 100%;
@@ -11,6 +11,7 @@ export const Container = styled.div`
   padding: 0;
   border-color: antiquewhite;
   border: 1px solid var(--outline);
+  overflow: auto;
 `;
 
 export const ProductInfo = styled.div`
@@ -21,4 +22,7 @@ export const ProductInfo = styled.div`
   max-width: 50vw;
 `;
 
-export const ProductForm = styled.form``;
+export const ProductUl = styled.ul`
+  list-style-type: none;
+  background: #282534;
+`;

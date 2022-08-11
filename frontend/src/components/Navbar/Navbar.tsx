@@ -14,18 +14,17 @@ export default function Header(): JSX.Element {
       variant="light"
     >
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/home">
           <img
             src={AppleFastLogo}
             style={{ width: "100px", height: "50px", margin: "0 30px 0 0" }}
           />
-          Apple Fast
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Estoque</Nav.Link>
-            <Nav.Link href="#pricing">Vendas</Nav.Link>
+            <Nav.Link href="/cadastrarProduto">Cadastrar Produto</Nav.Link>
+            <Nav.Link href="/home">Estoque</Nav.Link>
             <NavDropdown title="Redes Sociais" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">

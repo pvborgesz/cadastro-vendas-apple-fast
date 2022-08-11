@@ -4,7 +4,8 @@ export default createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-
+        background: #282534;
+        background-color: #282534;;
         color: var(--white)
     }
     html, body, #root{
