@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../Navbar/Navbar";
 import { Container, ProductInfo, ProductForm } from "./stylesRegister";
 import api from "../../services/api.js";
+import Alert from "../../components/Alert/indexAlert";
 
 interface ProductProps {
   nome: string;
@@ -12,6 +13,7 @@ export default function Menu() {
   const [nomeProduto, setNomeProduto] = useState<string>();
   const [descricaoProduto, setDescricaoProduto] = useState<string>();
   const [allProdutos, setAllProdutos] = useState<ProductProps[]>();
+  const [alert] = useState([]);
 
   useEffect(() => {
     api
@@ -39,6 +41,16 @@ export default function Menu() {
       .then(() => {})
       .catch(() => {});
   };
+
+  function showAlert(msg: string, status: string): any {
+    // alert.push(<Alert msg={msg} status={status} hide={closeAlert()} />);
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
+  }
+  function closeAlert() {
+    alert.length = 0;
+  }
 
   return (
     <div>

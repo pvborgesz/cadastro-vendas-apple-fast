@@ -35,7 +35,7 @@ export default function CardItem(props: Props): JSX.Element {
         bg={"Secondary"}
         key={"Secondary"}
         text={"dark"}
-        style={{ width: "30rem", margin: "10vh" }}
+        style={{ width: "20rem", margin: "10vh", border: "10px" }}
         className="mb-2"
         color={"background: #282534;"}
       >
